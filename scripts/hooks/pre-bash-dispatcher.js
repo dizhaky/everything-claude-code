@@ -20,5 +20,5 @@ process.stdin.on('end', () => {
     process.stderr.write(result.stderr);
   }
   process.stdout.write(result.output);
-  process.exit(result.exitCode);
+  process.exitCode = result.exitCode;
 });

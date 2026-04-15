@@ -50,6 +50,7 @@ if (require.main === module) {
       }
       process.stdout.write(String(result.stdout || ''));
       process.exit(Number.isInteger(result.exitCode) ? result.exitCode : 0);
+      return;
     }
 
     process.stdout.write(String(result));

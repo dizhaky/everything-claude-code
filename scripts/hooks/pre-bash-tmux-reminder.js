@@ -46,7 +46,8 @@ if (require.main === module) {
         process.stderr.write(`${result.stderr}\n`);
       }
       process.stdout.write(String(result.stdout || ''));
-      process.exit(Number.isInteger(result.exitCode) ? result.exitCode : 0);
+      process.exitCode = Number.isInteger(result.exitCode) ? result.exitCode : 0;
+      return;
     }
 
     process.stdout.write(String(result));
